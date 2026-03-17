@@ -1,5 +1,6 @@
 package one.digitalinnovation.gof.controller;
 
+import one.digitalinnovation.gof.proxy.ClienteServiceProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,7 +27,7 @@ import one.digitalinnovation.gof.service.ClienteService;
 public class ClienteRestController {
 
 	@Autowired
-	private ClienteService clienteService;
+	private ClienteServiceProxy clienteService;
 
 	@GetMapping
 	public ResponseEntity<Iterable<Cliente>> buscarTodos() {
